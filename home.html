@@ -1,0 +1,50 @@
+<div class="content-body" ng-controller="blog as ctrl" ng-cloak> 
+                                             
+         <div class="content-data" ng-repeat="i in ctrl.object"  >
+                                                            
+    <a href="#/blogs">
+                    <div class="leftcol" 
+                        ng-style="{'background-image':'url({{ctrl.object.blog+i.img}})'}; " 
+                        style="background-repeat: no-repeat;background-size: 100% 100%; ">
+
+                    </div> <!--end of left div -->
+
+                                                        
+                <div class="rightcol">
+                                                                    
+                        <p class="headlines"
+                            ng-bind="ctrl.object.blog+i.headline" 
+                            style=" font-size: 16px;font-style: italic;
+                                    color:white;
+                                    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial sans-serif;  
+                                    text-shadow: 1px 1px gray;"> 
+                        </p>
+                                                                        
+                        <p class="subheadline" 
+                            ng-bind="ctrl.object.blog+i.subheadline"
+                            style=" font-size: 10px; 
+                                    font-style: italic;
+                                    color:white;
+                                    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"> 
+                                                                        
+                            </p>
+                                                                        
+                            <pre class="body"  ng-bind="ctrl.object.blog+i.Body"                     
+                            style=" text-align: justify;font-size: 12px; padding-left: 10px; padding-right: 10px;
+                                white-space: pre-wrap;word-wrap: break-word;   font-family: 'Dosis', sans-serif;
+
+                                color:white;
+                                ">
+                            </pre>   
+                                                                    
+                                                                    
+                </div>   <!--end of right div -->
+ </a> <!---end of Anchor-->
+                                                             
+</div> <!-- content-data-->
+
+                                               
+                                                    
+                                                      
+</div> <!-- content-body-->
+                                           
