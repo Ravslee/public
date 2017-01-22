@@ -1,0 +1,43 @@
+
+<div ng-controller="blog as ctrls" >
+
+   <div
+  class="fb-share-button"   style="position: fixed; padding-top:200px;padding-left: 1150px "
+  data-href="https://desicrackedpot.firebaseapp.com/#!/content/{{ctrls.blogId}}/{{ctrls.headline}}" 
+  data-layout="box_count" 
+  data-size="large"
+   data-mobile-iframe="true">
+   <a class="fb-xfbml-parse-ignore" 
+   target="_blank"
+    href="https://www.facebook.com/sharer/sharer.php?u=https://desicrackedpot.firebaseapp.com/#!/content/{{ctrls.blogId}}/{{ctrls.headline}}&amp;src=sdkpreparse">
+    Share</a>
+    </div>
+
+
+
+<div  style=" background: white; padding:20px;padding-top: 30px;
+width: 60%; margin-left: 19%;margin-right: 19%;  border-right: lightgray solid 1px ; border-left: lightgray solid 1px ; border-style: groove" 
+
+  >
+  
+ 
+
+<p style="color: black ; text-align: center; font-family: 'Lato', sans-serif;font-size: 48px;
+ "  ng-bind="ctrls.object.blog{{ctrls.blogId}}.headline" > </p>
+<p style="color: black ;text-align: center;font-family: 'Courgette', cursive;
+font-size: 18px;" ng-bind="ctrls.object.blog{{ctrls.blogId}}.subheadline" style="font-style: italic"></p>
+<hr>
+
+<pre ng-bind="ctrls.object.blog{{ctrls.blogId}}.Body" style="font-size: 20px ;font-family: 'Quicksand', sans-serif;
+text-align: justify;
+
+color: rgba(0,0,0,0,1)">
+</pre>
+<hr>
+<div class="fb-comments"  dyn-fb-comment-box data-colorscheme="light"
+page-href="https://desicrackedpot.firebaseapp.com/#!/content/{{ctrls.blogId}}/{{ctrls.headline}}" 
+data-numposts="5"></div>
+
+
+</div>
+</div>

@@ -5,6 +5,8 @@
 
         <title >DCP</title>
 
+        
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 <!--
@@ -19,16 +21,22 @@
 <!-- AngularFire -->
 <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-messaging.js"></script>
 
-
 <script src="script\controller.js"></script>
 <script src="script\firebaseIntegration.js"></script>
+
 <link rel="stylesheet" href="style\style.css" type="text/css">
 
 <meta charset="utf-8"/>
@@ -36,7 +44,31 @@
     </head>
     
 <body ng-cloak  >
+
+<!---facebook integration -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
         
+
+<!--- facebook comments-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--facebook ends-->
+
+
          <div class="se-pre-con" ng-controller="blog as controller" ng-hide="controller.show" style="background: url(https://firebasestorage.googleapis.com/v0/b/desicrackedpot.appspot.com/o/preloader.gif?alt=media&token=61f8832c-03ba-4ae6-8966-7f73d141b8fd)  center no-repeat #fff; width: 100%; height: 100%;position: absolute; "> 
         
         </div>
@@ -46,7 +78,7 @@ style="background: url(https://firebasestorage.googleapis.com/v0/b/desicrackedpo
  no-repeat;
  background-size: 100% 100%; " >
  
-    </div>
+    </div> 
 
       <div class="container" ng-cloak> 
 
@@ -54,42 +86,70 @@ style="background: url(https://firebasestorage.googleapis.com/v0/b/desicrackedpo
                         <div class="header">
                             
                             <div class="header_inner">
-                                      
-                                        
-                                        <div class="navigation" >   
-                                         <div class="logo" >
-                                            <img class="logo"
-                                             src="https://firebasestorage.googleapis.com/v0/b/desicrackedpot.appspot.com/o/logo.png?alt=media&token=b9a701c4-a61e-4d0e-b44b-7dd71c42a4b7"/>
-                                        </div>                   
-                                        
-                                        <div class="category"><div class="animated_menu_v"></div><div class="menu_text"> HOME</div></div> </a>
-                                                <div class="category"><div class="animated_menu_v"></div><div class="menu_text">MY MUSINGS</div></div>
-                                                <div class="category"><div class="animated_menu_v"></div><div class="menu_text">BHOLU BHAKT SERIES</div></div> 
-                                                <div class="category"><div class="animated_menu_v"></div><div class="menu_text">MONKEY BATH</div></div>
-                                                <div class="category"><div class="animated_menu_v"></div><div class="menu_text">HEAD BREAKING NEWS</div></div>
-                                                <div class="category"><div class="animated_menu_v"></div><div class="menu_text">KELE PE CHARCHA</div></div>
-                                                <div class="category"><div class="animated_menu_v"></div><div class="menu_text">MOVIE REVIEWS</div></div>
-                                              <div class="category"><div class="animated_menu_v"></div><div class="menu_text">POSITIVE INDIA</div></div>                     
-                                        </div>  
+                                       <div class="logoSlogan" style="padding-left: 70px;justify-content:flex-start;padding-right: 130px;">
+                                                        <div class="logo" >
+                                                                <a ng-href="#!/">    
+                                                                
+                                                                <img class="logo"
+                                                                    src="https://firebasestorage.googleapis.com/v0/b/desicrackedpot.appspot.com/o/logo.png?alt=media&token=b9a701c4-a61e-4d0e-b44b-7dd71c42a4b7"/>
+                                                                </a>
+                                                        </div>     
+                                                     
+                                                       
+                                                </div>
+                            
+                           
+                                  <div class="navigation" >   
+                                           
+                                                    <div class="cats">
+                                             <a ng-href="#!/">           <div class="category"><div class="animated_menu_v"></div><div class="menu_text"> HOME</div></div> 
+                                             </a>        
+                                                        <div class="category"><div class="animated_menu_v"></div><div class="menu_text">MY MUSINGS</div></div>
+                                                        <div class="category"><div class="animated_menu_v"></div><div class="menu_text">BHOLU BHAKT SERIES</div></div> 
+                                                        <div class="category"><div class="animated_menu_v"></div><div class="menu_text">MONKEY BATH</div></div>
+                                                        <div class="category"><div class="animated_menu_v"></div><div class="menu_text">HEAD BREAKING NEWS</div></div>
+                                                        <div class="category"><div class="animated_menu_v"></div><div class="menu_text">KELE PE CHARCHA</div></div>
+                                                        <div class="category"><div class="animated_menu_v"></div><div class="menu_text">MOVIE REVIEWS</div></div>
+                                                    <div class="category"><div class="animated_menu_v"></div><div class="menu_text">POSITIVE INDIA</div></div>                     
+                                            
+                                            </div>
+                                    
+                                </div> <!--end of nevigation-->
                               </div>
                         </div>
                        
                     
-                                            <div class="slogan" >
-                                                         <p id="p2">
-                                                             A Little Bit of Everything and a Whole Lot of Nothing….Politics, Entertainment, Movies, Gossip. What's Life, if you can't see the humor in it. :)
-                                                         </p>
-                                            </div>
+                                         
                               
-      <div ng-view>
+      <div ng-view style="margin-top: 145px">
 
       </div>
+<br>
+      <div class="foter" style="align-content: center;margin-right: 0;margin-left: 0;border-top:4px solid cor" ng-controller="blog as contrl" ng-show="contrl.show">
+                       
+                        <div class="foterText" style="padding-top: 10px; text-align: center" >       
+                                     <p style="color: white;font-size: 34px;
+                                                font-family: 'Courgette', cursive;
+                                                text-underline-position: above;
+                                                text-decoration: underline">
+                                              ~The Desi Cracked Pot~
+                                     </p>                                      
+                        </div>                               
+                        <div style="padding-left: 40px; font-family: 'Courgette', cursive; color:white;text-align: center;">
+                        <p> Follow us on Social Media</p>            
+                        
 
-                              <div class="foter" style:"text-align:center" ng-controller="blog as contrl" ng-show="contrl.show">
-                                 <p style="color: white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"> UnderDevelopment</p>                                      
-                                                                                                            
-                                                    </div>            
-                   
+                         <div class="fb-like" 
+                                data-href="https://www.facebook.com/thedesicrackedpot/" 
+                                data-width="100" data-layout="standard" data-action="like" 
+                                data-size="large" data-show-faces="true" >
+                         </div>    
+
+                        </div>  
+<div class="twitter"  style="text-align: center;padding-left: 40px;padding-top: 20px;">
+<a href="https://twitter.com/DashyMashy" class="twitter-follow-button" data-show-count="false">Follow @DashyMashy</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>                                                      
+</div>                   
+      
           
 </div> 
 
